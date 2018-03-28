@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<style>
+
+
+#myInput {
+
+  width: 100%;
+  font-size: 16px;
+  margin-bottom:12px;
+  padding: 12px;
+}
+
+#pageInput{
+  width: 30%;
+  font-size: 16px;
+  margin-bottom:12px;
+  padding: 12px;
+}
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+<div class='col-md-8 col-md-offset-2 text-center'>
+<h2>My Customers</h2>
+
+<div class='row'>
+<div class="col-xs-9"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter search criteria:" title="Type in a name"></div>
+<div class="col-xs-3"><input type="text" id="pageInput" onkeyup="refresh()" placeholder="items per page" value='6'> Items/Page</div>
+</div>
+<table id="myTable">
+  <tr class="header">
+    <th onclick='sortByWord(0)'style='width:40%;'>Name</th>
+    <th onclick='sortTable(1)' style='width:30%;'>Age</th>
+    <th onclick = 'sortByWord(2)'style='width:30%;'>Country</th>
+  </tr>
+
+</table>
+<ul class='pagination' id='pages'>
+</ul>
+</div>
+<script src='./index.js'></script>
+<script>
+
+</script>
+
+</body>
+</html>
